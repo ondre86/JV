@@ -56,7 +56,7 @@
     font-size: 1.75rem;
 }
 .font-s{
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 .bold{
     font-weight: 600;
@@ -317,7 +317,6 @@ nav{
     width: 100%;
 }
 .projects .intro{
-    /* width: 100%; */
     max-width: none;
 }
 .js-pop-up{
@@ -348,7 +347,6 @@ nav{
     margin-top: 150px;
 }
 .project3, .project6{
-    /* margin-top: 100px; */
     grid-column: span 2;
     width: 100%;
     max-width: 800px;
@@ -404,7 +402,6 @@ button{
     justify-content: center;
     gap: 10px;
     padding: 10px 0 0 0;
-    /* gap: 10px; */
 }
 @media (hover:hover){
     .project:hover, .project:focus{
@@ -487,7 +484,8 @@ dialog:modal{
 .d-meta{
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    margin-bottom: 2rem;
 }
 .d-title{
     width: 50%;
@@ -549,7 +547,6 @@ dialog:modal{
 }
 .cta-title-holster{
     align-self: center;
-    padding: 50px;
 }
 .cta-wrap{
     display: grid;
@@ -637,7 +634,6 @@ dotlottie-player{
     .name1{
         align-self: center;
         height: fit-content;
-        /* margin-bottom: -50px; */
     }
     .name2{
         align-self: center;
@@ -685,7 +681,6 @@ dotlottie-player{
         gap: 5rem;
     }
     .dcw img{
-        /* max-height: 300px; */
         width: 100%;
         justify-self: center;
     }
@@ -725,8 +720,6 @@ dotlottie-player{
     .smiley-face{
         height: clamp(2.5rem, 0.3253rem + 10.2245vw, 5.7375rem);
         margin-bottom: 2%;
-        /* width: clamp(2.5rem, 0.3253rem + 10.2245vw, 5.7375rem); */
-        /* transform: translateX(150%); */
     }
     .bub-large div .bub-img{
         height: 200px
