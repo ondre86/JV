@@ -9,27 +9,40 @@ const isDark = window.matchMedia(`(prefers-color-scheme: dark)`) === true || win
 const isMobile = window.matchMedia(`(max-width: 800px)`) === true || window.matchMedia(`(max-width: 800px)`).matches === true
 
 dialogContent = {
-    title: ["Yelp","def", "ghi", "jkl", "mno", "pqr"],
+    title: ["Yelp","The MKRT Co.", "Louisiana State University"],
     role: ["Public Relations", "Copywriting", "Research", "Event Planning"],
-    dates: ["Q1 2023", "Q3 2022", "Q2 2021", "Q4 2019", "Q2 2017", "Q4 2016", "Q1 2014"],
     txt: [
-        ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.", "callous", "doorstep", "elephant", "freeman"],
-        ["gangster", "hoover", "inglewood", "killer", "litigious", "maniac"],
-        ["niggas", "opening", "pressure", "questions", "ridiculous", "savant"],
-        ["trippin", "understand", "voracious", "withstand", "xenon", "yesterday"],
-        ["alphabet", "banging", "crip", "delirious", "euphoria", "fugitive"],
-        ["greatness", "homeless", "inverted", "justice", "kelvin", "lemonade"],
+        [
+            "<a href='https://yelp.com' target='_blank' rel='noopener'>Yelp</a> is one of the leading sites for aggregating and sharing user-generated reviews and photos of businesses. <br><br> In addition to providing a hub for quality recommendations, Yelp is a fierce proponent of fostering community in its markets to support local businesses and users.",
+            "As the Yelp New Orleans community manager I was the on-the-ground face of the brand in the city and surrounding areas. <br> I managed a vibrant and eclectic community of about 300 engaged Yelp users called the <a href='https://yelp.com/elite' target='_blank' rel='noopener'>Yelp Elite Squad</a>. <br><br> I had the pleasure of working with local business owners and managers to curate and host unique promotional events for those users and the wider New Orleans community to highlight their products and services.", 
+            "These duties are best exemplified in my execution of our signature event <a href='https://www.yelp.com/biz/yelp-krewe-du-vieux-tailgate-2023-new-orleans?sort_by=date_desc' target='_blank' rel='noopener'>Yelp's Krewe du Vieux Tailgate</a> This event was held in collaboration with a community partner, <a href='https://nolajazzmuseum.org/events/2023/2/4/yelps-krewe-du-vieux-outdoor-tailgate' target='_blank' rel='noopener'>New Orleans Jazz Museum</a>, to celebrate our local tradition of Mardi Gras. <br><br> The tailgate was a free event and was open to the public with the Yelp Elite Squad getting special perks such as early entry and swag. Over 400 people attended the event, had national beverage sponsors, and featured 14 local business partners. <br><br> I was responsible for pitching and securing the local businesses and sponsors, event day logistics (event flow, security, crowd control, amenities, etc), creating the promotional graphics, executing the marketing, and more.", 
+            "In addition, I managed YelpNOLA's social media profiles (<a href='https://www.instagram.com/yelpnola/' target='_blank' rel='noopener'>Instagram</a>, <a href='https://www.facebook.com/YelpNewOrleans/' target='_blank' rel='noopener'>Facebook</a>, and <a href='https://www.twitter.com/yelpnola/' target='_blank' rel='noopener'>Twitter</a>), which had upward of 20k followers combined. I also curated and wrote a themed, weekly roundup of local businesses for our city-wide newsletter with a readership of about 68k and produced a monthly newsletter for the Yelp Elite Squad.", 
+        ],
+        [
+            '<a href="https://www.themrkt.co/" target="_blank" rel="noopener">The MRKT Co.</a> is a premier marketing agency that specializes in outreach to diverse and multicultural audiences. <br><br> <em>"Blending strategic messaging, compelling design, and unignorable creativity, we help companies grow by creating powerful experiences between audience and brand."</em>', 
+            "I was brought on as a part-time online community manager to support the agency in executing a campaign for one of its clients, the <a href='https://www.oprah.com/app/own-tv.html' target='_blank' rel='noopener'>Oprah Winfrey Network (OWN)</a>. <br><br> The <a href='https://www.oprah.com/sp/own-your-health.html' target='_blank' rel='noopener'>OWN Your Health campaign</a>. was an initiative that sought to bring awareness to Black women’s health and wellness. ", 
+            "As community manager, I worked with the MRKT and OWN teams to write asset and social media copy, foster community engagement in the <a href='https://www.facebook.com/groups/907295180105969/' target='_blank' rel='noopener'>OWN Your Facebook group</a>, curate and develop social media content, and assist with social media strategy.", 
+            "I also monitored post analytics and tracked brand sentiments using <a href='https://sproutsocial.com/' target='_blank' rel='noopener'>Sprout Social</a> throughout the campaign to measure effectiveness. ", 
+        ],
+        [
+            "<a href='https://lsu.edu/' target='_blank' rel='noopener'>Louisiana State University</a> is Louisiana’s flagship and a land, sea, and space grant institution. <br><br> During my tenure, I had the pleasure of working with several departments and units. I spent my last few years working in the <a href='https://www.lsu.edu/global-engagement/' target='_blank' rel='noopener'>International Programs department</a> — first as the communication and outreach coordinator for Academic Programs Abroad, and lastly, as the communication and marketing specialist for International Programs as a whole. ", 
+            "At Academic Programs Abroad (APA) I was in charge of marketing strategy and execution for our study abroad programs and support services. <br><br> This included but was not limited to, managing our social media accounts as well as curating and creating the content, planning and executing our twice, yearly study abroad fair for the entire student body, coordinating presentations and other in-person marketing opportunities, designing flyers and other creative, and copywriting.", 
+            "In addition to those core duties, I oversaw, facilitated, and revamped the LSU Study Abroad Scholarship, supervised a small team of student workers and interns who assisted with marketing tasks and produced and facilitated our staff retreat.", 
+            "In 2022, I was elevated to Communication and Marketing Specialist for International Programs. Many of my responsibilities mirrored those that I had in APA, but with the inclusion of more high-level projects. <br><br> These included creating and leading a communications committee with members from each of our units, creating detailed standard operating procedures and workflows for marketing tasks and requests, writing press releases, auditing and revamping our departmental websites, and aggregating our yearly data into a comprehensive report for stakeholders.", 
+        ],
     ],
     img: [
-        ["1-1.jpg", "1-2.jpg", "1-3.jpg", "1-4.jpg", "1-5.jpg", "1-6.jpg"],
-        ["2-1.jpg", "2-2.jpg", "2-3.jpg", "2-4.jpg", "2-5.jpg", "2-6.jpg"],
-        ["3-1.jpg", "3-2.jpg", "3-3.jpg", "3-4.jpg", "3-5.jpg", "3-6.jpg"],
-        ["4-1.jpg", "4-2.jpg", "4-3.jpg", "4-4.jpg", "4-5.jpg", "4-6.jpg"],
-        ["5-1.jpg", "5-2.jpg", "5-3.jpg", "5-4.jpg", "5-5.jpg", "5-6.jpg"],
-        ["6-1.jpg", "6-2.jpg", "6-3.jpg", "6-4.jpg", "6-5.jpg", "6-6.jpg"]    
+        ["yelp.jpg", "yelp-elite.png", "tailgate.webp", "yelp-social.png"],
+        ["mrkt.png", "OWN-health.webp", "OWN-group.webp", "sprout.jpg"],
+        ["lsu.png", "lsu-start.webp", "lsu-funding.png", "lsu-global.png"],  
     ],
 }
-
+colors = {
+    yellow: "rgb(255, 223, 54)",
+    purple: "rgb(247, 199, 255)",
+    green: "rgb(196, 236, 153)"
+    
+}
 
 // Animation Timelines
 function fadeInBody(){
@@ -70,14 +83,14 @@ function fadeInHeroContent(){
         stagger: .5,
         delay: .25
     })
-    .from(".intro", {
+    .from(".intro-wrap .intro", {
         y: 50,
         opacity: 0,
         duration: 1,
     })
-    .to("nav", {
-        opacity: 1,
-        y: 0,
+    .from("nav", {
+        opacity: 0,
+        y: -50,
         duration: 1,
     }, "<")
 
@@ -103,7 +116,7 @@ function rotateSmileyFace(){
         duration: 2
     })
     .to("#smiley-fill", {
-        fill: "#f7c7ff",
+        fill: colors.purple,
         duration: 0.1
     })
     .to(".smiley-face", {
@@ -116,7 +129,7 @@ function rotateSmileyFace(){
         duration: 2
     })
     .to("#smiley-fill", {
-        fill: "#A0D369",
+        fill: colors.green,
         duration: 0.1
     })
     .to(".smiley-face", {
@@ -188,19 +201,13 @@ addEventListener("load", (event) => {
     .add(rotateSmileyFace(), ">-=.5")
     .add(repeatChatText, 0)
 
-
-
-    gsap.from("button", {
-        scrollTrigger: {
-            trigger: ".project3",
-            start: "top bottom-=15%",
-            end: "+=10%",
-            scrub: 0
-        },
-        y: 100,
-        opacity: 0,
-    })
-
+    for (element of $(".projects")[0].children){
+        gsap.from(element, {
+            scrollTrigger: element,
+            y: 150,
+            opacity: 0,
+        })
+    }
 
     ctaIconZoom()
 
@@ -223,10 +230,14 @@ addEventListener("load", (event) => {
                 if ($(".js-pop-up")[x].getAttribute("data-popup") == x){
                     dialogObj.title.innerHTML = dialogContent.title[x]
                     dialogObj.metaRole.innerHTML = $(".bmh")[x].innerHTML
-                    dialogObj.metaDate.innerHTML = dialogContent.dates[x]
-                    for (let v = 0; v < dialogContent.txt[0].length; v++){
+                    for (let v = 0; v < dialogContent.txt[x].length; v++){
                         dialogObj.dcwText[v].innerHTML = dialogContent.txt[x][v]
-                        dialogObj.dcw[v].children[1].src = `assets/img/${dialogContent.img[x][v]}`
+                        if (dialogObj.dcw[v].children[1].nodeName != "P"){
+                            dialogObj.dcw[v].children[1].src = `assets/img/${dialogContent.img[x][v]}`
+                        }
+                        else {
+                            dialogObj.dcw[v].children[0].src = `assets/img/${dialogContent.img[x][v]}`
+                        }
                     }
                 }
                 gsap.to("dialog", {
