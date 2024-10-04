@@ -145,6 +145,9 @@ function rotateSmileyFace(){
         rotateY: 0,
         duration: 2
     }) 
+    .to(".js-smiley-char", {
+        duration: 2
+    })
 
     return rotatingSmileyFace
 }
