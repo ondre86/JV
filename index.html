@@ -63,7 +63,7 @@
             <div class="nav-link-wrap"><span class="font-sm bold nav-link" href="">resumé</span></div>
         </a>
         <a class="nav-link" href="">
-            <div class="nav-link-wrap"><span class="font-sm bold nav-link" href="">email</span></div>
+            <div class="nav-link-wrap"><span class="font-sm bold nav-link" href="mailto:jordanvernon5@gmail.com">email</span></div>
         </a>
         <a class="nav-link" href="">
             <div class="nav-link-wrap"><span class="font-sm bold nav-link" href="">meet</span></div>
@@ -272,7 +272,8 @@
                         <div class="bubble">
                             <h3 class="font-m bold">
                                 I have <span class="font-m bold highlight-yellow">ten years</span> of experience in communications and marketing with specific strengths in <span class="highlight-yellow font-m bold">strategic planning</span>, <span class="highlight-purple font-m bold">content marketing</span>, <span class="highlight-green font-m bold">event planning</span>, and <span class="highlight-blue font-m bold">copywriting</span>. <br><br> I believe good branding is more than just logos and banners, but solid, efficient processes.
-                                That may sound a little boring, but it makes the fun stuff much easier — I promise!
+                                That may sound a little boring, but it makes the fun stuff much easier — I promise! <br><br>
+                                Click a bubble below to read more.
                             </h3>
                         </div>
                         <div class="pointer p3"></div>
@@ -281,7 +282,7 @@
                     <button data-popup="0" class="js-pop-up project3">
                         <div class="project">
                             <div class="bubble b3 bub-large">
-                                <div><img class="bub-img" src="assets/img/yelp.jpg" height="200px" width="280px" alt=""></div>
+                                <div><img class="bub-img" src="assets/img/yelp.png" height="200px" width="280px" alt=""></div>
                                 <div class="bub-txt">
                                     <h4 class="font-xl bold">Yelp</h4>
                                     <div class="bmh">
@@ -340,7 +341,34 @@
                 </div>
             </div>
         </section>
-        <dialog>
+        <section class="blog">
+            <div class="inner-project-wrap">
+                <h2 class="font-xxl">Blog</h2>
+                <button class="blog-post" data-popup="0">
+                    <div class="intro">
+                        <div class="bubble">
+                            <h3 class="font-xl bold">
+                                Bring Back Websites
+                            </h3>
+                        </div>
+                        <div class="pointer pm"></div>
+                        <div class="pointer pointer2 pm"></div>
+                    </div>
+                </button>
+                <button class="blog-post" data-popup="1">
+                    <div class="intro">
+                        <div class="bubble">
+                            <h3 class="font-xl bold">
+                                Copy Parking Lot
+                            </h3>
+                        </div>
+                        <div class="pointer pm"></div>
+                        <div class="pointer pointer2 pm"></div>
+                    </div>
+                </button>
+            </div>
+        </section>
+        <dialog id="project-dialog">
             <div class="d-content">
                 <div class="d-meta-holster">
                     <div class="d-title">
@@ -373,12 +401,25 @@
                 </div>
             </div>
         </dialog>
+        <dialog id="blog-dialog">
+            <div class="d-content">
+                <div class="d-meta-holster d-blog-meta">
+                    <div class="d-title">
+                        <h4 class="font-xl bold"></h4>
+                    </div>
+                    <button class="x font-m bold">x</button>
+                </div>
+                <div class="d-content-holster">
+                    <p class="d-blog"></p>
+                </div>
+            </div>
+        </dialog>
         <footer class="footer">
             <div class="footer-content-wrap">
                 <div class="cta-title-holster">
                     <h2 class="headline font-xxl">
-                        <span class="bold font-xxl chat">Let's</span>
-                        <span class="bold font-xxl chat2">Chat!</span>
+                        <span class="font-xxl chat">Let's</span>
+                        <span class="font-xxl chat2">Chat!</span>
                     </h2>
                 </div>
                 <div class="cta-wrap">
@@ -393,14 +434,14 @@
                                 </g>
                             </svg>
                         </div>
-                        <a class="cta-link bold font-sm" href="mailto">jvernon@gmail.com</a>
+                        <a class="cta-link bold font-sm" href="mailto:jordanvernon5@gmail.com">Send Email</a>
                     </div>
                     <div class="cta-holster">
                         <span class="cta font-l bold">Meet</span>
                         <div class="cta-svg">
                             <svg aria-hidden="true" alt="" id="People" width="187px" height="165px" viewBox="0 -20 197 205" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g  fill="#000000" fill-rule="nonzero">
+                                    <g id="people" fill="#000000" fill-rule="nonzero">
                                         <path d="M65.5000785,73 C72.9168242,73 80.1671095,70.8592763 86.3343072,66.8485829 C92.5009076,62.8379929 97.3075506,57.1374883 100.145939,50.4679093 C102.984327,43.7984336 103.726032,36.4595621 102.279459,29.379255 C100.832887,22.298948 97.2607585,15.7952717 92.0170575,10.690612 C86.7723609,5.58605568 80.090251,2.10974268 72.8159723,0.701325602 C65.541594,-0.706988173 58.001596,0.0158146938 51.1494417,2.77841539 C44.2971878,5.54101608 38.4404108,10.2193491 34.3199191,16.2217016 C30.1993279,22.2240542 28,29.281015 28,36.5000564 C28,46.1803671 31.9508455,55.4643087 38.9834978,62.3093975 C46.0161501,69.1544863 55.5543696,73 65.5000785,73 Z M65.5000785,18.250033 C69.2084016,18.250033 72.833594,19.3203432 75.9169938,21.3257415 C79.0003935,23.3310365 81.4032172,26.1812371 82.8229092,29.5160267 C84.2416056,32.8508162 84.6129556,36.5203036 83.8901671,40.0603538 C83.166383,43.6005073 81.3803189,46.8523455 78.7582693,49.4047269 C76.1360206,51.9570051 72.7951648,53.6951616 69.1580254,54.3993702 C65.5208861,55.1034754 61.7508373,54.7421256 58.3247601,53.3607736 C54.8985834,51.9795249 51.9702945,49.6403584 49.909949,46.6391305 C47.8497032,43.6380059 46.7499895,40.1095255 46.7499895,36.5000564 C46.7499895,31.6598494 48.7254122,27.0178786 52.2417881,23.5952826 C55.7580645,20.1727898 60.5272738,18.250033 65.5000785,18.250033 Z" id="Shape"></path>
                                         <path d="M139.999669,92 C145.538152,92 150.951752,90.3863358 155.555591,87.3644772 C160.160421,84.3436563 163.749335,80.0485076 165.868389,75.0234224 C167.987444,69.9985447 168.542481,64.4692283 167.46214,59.1347969 C166.381799,53.8003654 163.714645,48.90043 159.798656,45.054513 C155.882667,41.208596 150.894265,38.5894789 145.462825,37.5284039 C140.031385,36.4673289 134.401717,37.0119276 129.285459,39.093295 C124.169201,41.1746624 119.796297,44.6994031 116.718811,49.22171 C113.642317,53.7440169 112,59.060807 112,64.4997374 C112,71.7930845 114.95062,78.7876703 120.201673,83.9451694 C125.452726,89.1026685 132.574057,92 139.999669,92 Z M139.884428,52.6662999 C142.301683,52.6662999 144.664442,53.3700001 146.672982,54.6886907 C148.68282,56.0072455 150.248911,57.8814245 151.172735,60.0740347 C152.097857,62.2667807 152.340491,64.6796028 151.868199,67.0073831 C151.397204,69.3351635 150.23334,71.473298 148.524524,73.1515822 C146.815708,74.8298663 144.638492,75.9727677 142.269245,76.4357427 C139.898701,76.8987176 137.442521,76.6611169 135.209512,75.7528275 C132.976503,74.8446739 131.069169,73.3065864 129.726249,71.3331014 C128.38333,69.3597523 127.667107,67.0397153 127.667107,64.6662895 C127.667107,61.4837444 128.954233,58.431479 131.24563,56.1809969 C133.537026,53.9305149 136.644554,52.6662999 139.884428,52.6662999 Z" id="Shape"></path>
                                         <path d="M140.249379,101.049669 C129.888265,101.061046 119.824033,104.434745 111.638405,110.64227 C102.480708,101.729166 90.8268125,95.6643669 78.1455429,93.2142459 C65.4647697,90.7651591 52.3255656,92.0383119 40.3847159,96.8754652 C28.4439656,101.712618 18.2363563,109.895547 11.0493072,120.394145 C3.86215888,130.891709 0.0174753828,143.234362 0,155.864534 C0,158.28673 0.985075411,160.610674 2.7385712,162.324414 C4.49196771,164.03712 6.87020843,165 9.35002482,165 C11.8297419,165 14.2079826,164.03712 15.9614784,162.324414 C17.7148749,160.610674 18.6999504,158.28673 18.6999504,155.864534 C18.6999504,143.749414 23.6254267,132.130732 32.3927071,123.564099 C41.1600868,114.997466 53.0510918,110.185135 65.4499752,110.185135 C77.8487592,110.185135 89.7395657,114.997466 98.5070447,123.564099 C107.274524,132.130732 112.199404,143.749414 112.199404,155.864534 C112.199404,158.28673 113.185373,160.610674 114.938869,162.324414 C116.692365,164.03712 119.070407,165 121.549727,165 C124.03004,165 126.408082,164.03712 128.161578,162.324414 C129.915074,160.610674 130.90005,158.28673 130.90005,155.864534 C130.921894,145.161156 128.154627,134.628428 122.858395,125.259223 C126.990926,122.068584 131.958502,120.079735 137.193173,119.519176 C142.428838,118.958616 147.719113,119.849099 152.460303,122.089269 C157.201494,124.329439 161.201966,127.828282 164.002992,132.185546 C166.804018,136.542811 168.293397,141.582676 168.299355,146.728034 C168.299355,149.151264 169.285324,151.475208 171.038819,153.187914 C172.792315,154.901654 175.170357,155.864534 177.649677,155.864534 C180.12999,155.864534 182.508032,154.901654 184.261528,153.187914 C186.015024,151.475208 187,149.151264 187,146.728034 C187,134.613948 182.074126,122.995265 173.306648,114.428633 C164.540161,105.862 152.648958,101.049669 140.249379,101.049669 Z" id="Path"></path>
@@ -408,7 +449,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <a class="cta-link bold font-sm" href="mailto">Book 30-min call</a>
+                        <a class="cta-link bold font-sm" href="mailto">Schedule Call</a>
                     </div>
                 </div>
             </div>

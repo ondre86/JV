@@ -72,15 +72,19 @@
 }
 .highlight-yellow{
     background-color: var(--yellow);
+    padding: 2px 5px;
 }
 .highlight-purple{
     background-color: var(--purple);
+    padding: 2px 5px;
 }
 .highlight-green{
     background-color: var(--green);
+    padding: 2px 5px;
 }
 .highlight-blue{
     background-color: var(--blue);
+    padding: 2px 5px;
 }
 .underline{
     text-decoration: underline var(--purple);
@@ -108,6 +112,9 @@ body{
     width: 100vw;
     opacity: 0;
 }
+a:visited{
+    color: blue
+}
 
 /* NAV */
 nav{
@@ -129,6 +136,9 @@ nav{
     text-decoration: none;
     color: white;
     transition: all .3s;
+}
+.nav-link:focus{
+    outline: none;
 }
 .nav-link:visited{
     color: white;
@@ -307,7 +317,7 @@ nav{
     align-items: center;
 }
 .projects{
-    padding: 150px 5% 75px;
+    padding: 150px 5% 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -332,9 +342,6 @@ nav{
     align-items: center;
     gap: 4rem;
     width: 100%;
-}
-.inner-project-wrap button:first-of-type{
-    margin-top: 5rem;
 }
 .span2{
     width: 100%;
@@ -364,6 +371,12 @@ nav{
 }
 button{
     color: black
+}
+button:focus{
+    outline: none;
+}
+button:focus .bubble, button:focus .pointer:not(.pointer2){
+    outline-style: dashed;
 }
 .bub-img{
     padding: 2rem 0 0 0;
@@ -403,14 +416,14 @@ button{
     gap: 10px;
     padding: 10px 0 0 0;
 }
-@media (hover:hover){
-    .project:hover, .project:focus{
-        transform: translate(0px, 10px);
+/* @media (hover:hover){ */
+    .project3:hover, .project3:focus, .blog-post:hover, .blog-post:focus{
+        transform: translate(0px, 20px);
     }
-    .project:hover .bubble, .project:focus .bubble{
+    .project3:hover .bubble, .project3:focus .bubble, .blog-post:hover .bubble, .blog-post:focus .bubble{
         box-shadow: 0px -13px 30px 6px #b6b6b6;
     }
-}
+/* } */
 /* DIALOG */
 dialog{
     display: none;
@@ -427,7 +440,7 @@ dialog:modal{
     display: flex;
     align-self: center;
     justify-self: center;
-    margin: 10vh 5%;
+    margin: 10vh 5% 0;
     width: 90%;
     max-height: 90vh;
     min-height: 90vh;
@@ -504,6 +517,7 @@ dialog:modal{
     padding: 0 50px;
     column-gap: 100px;
     row-gap: 7.5rem;
+    overflow-x: hidden;
 }
 .dcw{
     display: grid;
@@ -529,6 +543,32 @@ dialog:modal{
     line-height: 1.5em;
     font-size: 1.5rem;
 }
+
+/* BLOG */
+.blog{
+    padding: 75px 0 150px;
+}
+.blog .bubble h3{
+    padding: 2rem;
+    line-height: 3.25rem;
+}
+.blog-post{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+.d-blog{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    max-width: 800px;
+}
+.d-blog-meta{
+    padding-bottom: 50px;
+}
+
 /* FOOTER */
 .footer{
     position: relative;
@@ -780,5 +820,38 @@ dotlottie-player{
 @media screen and (max-width: 475px) {
     .flower-holster{
         height: 50px;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body, dialog, .d-content, .d-meta-holster, .bubble, .pointer{
+        background-color: rgb(27, 27, 27);
+    }
+    .bubble, .pointer, dialog:modal {
+        outline-color: white;
+    }
+    p, span, h1, h2, h3, h4, h5, h6, .cta-holster:last-of-type .cta-link {
+        color: white
+    }
+    #Email, #people{
+        fill: white;
+        stroke: white;
+    }
+    #smiley-fill{
+        stroke-width: 2;
+        stroke: white;
+    }
+
+    .highlight-blue, .highlight-green, .highlight-purple, .highlight-yellow{
+        color: black
+    }
+    .bub-meta{
+        background-color: rgb(44, 44, 44);
+        border-color: white;
+    }
+    a, a:visited {
+        color: rgb(171, 254, 242);
+    }
+    .cta-holster:last-of-type .cta-link:hover {
+        color: black
     }
 }
