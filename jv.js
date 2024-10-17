@@ -50,8 +50,7 @@ colors = {
     green: "rgb(196, 236, 153)"
 }
 
-
-// Animation Timelines
+// Animations
 function fadeInBody(){
     enterBody = gsap.timeline()
     .to("body", {
@@ -202,8 +201,9 @@ function ctaIconZoom(){
     })
 }
 
-
 addEventListener("load", (event) => {
+    ctaIconZoom()
+
     master = gsap.timeline()
     .add(fadeInBody(), 0)
     .add(namesScroll(), 0)
@@ -211,128 +211,133 @@ addEventListener("load", (event) => {
     .add(rotateSmileyFace(), ">-=.5")
     .add(repeatChatText, 0)
 
-    for (element of $(".projects")[0].children){
+    elements = [...$(".projects")[0].children, $(".blog .inner-project-wrap")[0], $(".footer-content-wrap")[0]]
+    for (element of elements){
         gsap.from(element, {
             scrollTrigger: element,
             y: 150,
             opacity: 0,
         })
     }
-    gsap.from(".blog .inner-project-wrap", {
-        scrollTrigger: ".blog .inner-project-wrap",
-        y: 150,
-        opacity: 0,
-    })
-    gsap.from(".footer-content-wrap", {
-        scrollTrigger: ".footer-content-wrap",
-        y: 150,
-        opacity: 0,
-    })
 
-    ctaIconZoom()
-
-
-// DIALOG
-    // INITIALIZE
-        dialogObj = {
-            dialog: $("dialog")[0],
-            x: $("dialog button")[0],
-            title: $(".d-title h4")[0],
-            metaRole: $(".dmw")[0],
-            metaDate: $(".d-date")[0],
-            dcwText: $(".d-txt"),
-            dcw: $(".dcw")
-        }
-        dialogObj2 = {
-            dialog: $("dialog")[1],
-            x: $("dialog button")[1],
-            title: $(".d-title h4")[1],
-            txt: $(".d-blog")[0],
-        }
+    // DIALOG
+    dialogObj = {
+        dialog: $("dialog")[0],
+        x: $("dialog button")[0],
+        title: $(".d-title h4")[0],
+        metaRole: $(".dmw")[0],
+        metaDate: $(".d-date")[0],
+        dcwText: $(".d-txt"),
+        dcw: $(".dcw")
+    }
+    dialogObj2 = {
+        dialog: $("dialog")[1],
+        x: $("dialog button")[1],
+        title: $(".d-title h4")[1],
+        txt: $(".d-blog")[0],
+    }
     // OPEN
-        for (let x = 0; x < $(".js-pop-up").length; x++){
-            $(".js-pop-up")[x].addEventListener("click", (e)=>{
-                dialogObj.dialog.showModal() 
-                if ($(".js-pop-up")[x].getAttribute("data-popup") == x){
-                    dialogObj.title.innerHTML = dialogContent.title[x]
-                    dialogObj.metaRole.innerHTML = $(".bmh")[x].innerHTML
-                    for (let v = 0; v < dialogContent.txt[x].length; v++){
-                        dialogObj.dcwText[v].innerHTML = dialogContent.txt[x][v]
-                        if (dialogObj.dcw[v].children[1].nodeName != "P"){
-                            dialogObj.dcw[v].children[1].src = `assets/img/${dialogContent.img[x][v]}`
-                        }
-                        else {
-                            dialogObj.dcw[v].children[0].src = `assets/img/${dialogContent.img[x][v]}`
-                        }
+    for (let x = 0; x < $(".js-pop-up").length; x++){
+        $(".js-pop-up")[x].addEventListener("click", (e)=>{
+            dialogObj.dialog.showModal() 
+            if ($(".js-pop-up")[x].getAttribute("data-popup") == x){
+                dialogObj.title.innerHTML = dialogContent.title[x]
+                dialogObj.metaRole.innerHTML = $(".bmh")[x].innerHTML
+                for (let v = 0; v < dialogContent.txt[x].length; v++){
+                    dialogObj.dcwText[v].innerHTML = dialogContent.txt[x][v]
+                    if (dialogObj.dcw[v].children[1].nodeName != "P"){
+                        dialogObj.dcw[v].children[1].src = `assets/img/${dialogContent.img[x][v]}`
+                    }
+                    else {
+                        dialogObj.dcw[v].children[0].src = `assets/img/${dialogContent.img[x][v]}`
                     }
                 }
-                gsap.to("#project-dialog", {
-                    y: 0,
-                    duration: .5,
-                    ease: "power2.out"
-                })
+            }
+            gsap.to("#project-dialog", {
+                y: 0,
+                duration: .5,
+                ease: "power2.out"
             })
-        }
-        for (let x = 0; x < $(".blog-post").length; x++){
-            $(".blog-post")[x].addEventListener("click", (e)=>{
-                dialogObj2.dialog.showModal() 
-                if ($(".blog-post")[x].getAttribute("data-popup") == x){
-                    dialogObj2.title.innerHTML = dialogContent2.title[x]
-                    dialogObj2.txt.innerHTML = dialogContent2.txt[x]
-                }
-                gsap.to("#blog-dialog", {
-                    y: 0,
-                    duration: .5,
-                    ease: "power2.out"
-                })
+        })
+    }
+    for (let x = 0; x < $(".blog-post").length; x++){
+        $(".blog-post")[x].addEventListener("click", (e)=>{
+            dialogObj2.dialog.showModal() 
+            if ($(".blog-post")[x].getAttribute("data-popup") == x){
+                dialogObj2.title.innerHTML = dialogContent2.title[x]
+                dialogObj2.txt.innerHTML = dialogContent2.txt[x]
+            }
+            gsap.to("#blog-dialog", {
+                y: 0,
+                duration: .5,
+                ease: "power2.out"
             })
-        }
+        })
+    }
     // CLOSE
-        $("dialog button")[0].addEventListener("click", (e)=>{
+    $("dialog button")[0].addEventListener("click", (e)=>{
+        gsap.to("#project-dialog", {
+            y: "100vh",
+            duration: .5,
+            ease: "power2.out"
+        })
+        // CLOSE DIALOG
+        setTimeout(() => {
+            dialogObj.dialog.close()
+        }, 500)
+
+        dialogObj.dialog.scrollTo(0,0)
+    })
+    $("dialog button")[1].addEventListener("click", (e)=>{
+        gsap.to("#blog-dialog", {
+            y: "100vh",
+            duration: .5,
+            ease: "power2.out"
+        })
+        // CLOSE DIALOG
+        setTimeout(() => {
+            dialogObj2.dialog.close()
+        }, 500)
+
+        dialogObj2.dialog.scrollTo(0,0)
+    })
+    // BOUNDING BOX CLICK TO EXIT
+    dialogObj.dialog.addEventListener('click', (event) => {
+        let rect = dialogObj.dialog.getBoundingClientRect();
+        let isClickInsideDialog = (
+            rect.top <= event.clientY && 
+            event.clientY <= rect.top + rect.height &&
+            rect.left <= event.clientX && 
+            event.clientX <= rect.left + rect.width
+        )
+        if (!isClickInsideDialog) {
             gsap.to("#project-dialog", {
                 y: "100vh",
                 duration: .5,
                 ease: "power2.out"
             })
-            // CLOSE DIALOG
             setTimeout(() => {
                 dialogObj.dialog.close()
             }, 500)
-
-            dialogObj.dialog.scrollTo(0,0)
-        })
-        $("dialog button")[1].addEventListener("click", (e)=>{
+        }
+    })
+    dialogObj2.dialog.addEventListener('click', (event) => {
+        let rect = dialogObj2.dialog.getBoundingClientRect();
+        let isClickInsideDialog = (
+            rect.top <= event.clientY && 
+            event.clientY <= rect.top + rect.height &&
+            rect.left <= event.clientX && 
+            event.clientX <= rect.left + rect.width
+        )
+        if (!isClickInsideDialog) {
             gsap.to("#blog-dialog", {
                 y: "100vh",
                 duration: .5,
                 ease: "power2.out"
             })
-            // CLOSE DIALOG
             setTimeout(() => {
                 dialogObj2.dialog.close()
             }, 500)
-
-            dialogObj2.dialog.scrollTo(0,0)
-        })
-    // BOUNDING BOX CLICK TO EXIT
-        dialogObj.dialog.addEventListener('click', function(event) {
-            var rect = dialogObj.dialog.getBoundingClientRect();
-            var isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height &&
-            rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
-            if (!isInDialog) {
-                gsap.to("dialog", {
-                    y: "100vh",
-                    duration: .5,
-                    ease: "power2.out"
-                })
-            // CLOSE DIALOG
-            setTimeout(() => {
-                dialogObj.dialog.close()
-            }, 500);
-            }
-        })
-})
-
-window.addEventListener("resize", (e)=>{
-    // console.log("flip")
+        }
+    })
 })

@@ -561,7 +561,7 @@ dialog:modal{
     transition: all .5s;
 }
 .d-blog{
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 2.5rem;
     max-width: 800px;
 }
