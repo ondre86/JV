@@ -112,7 +112,7 @@ body{
     width: 100vw;
     opacity: 0;
 }
-a:visited{
+a:visited:not(.cta-link){
     color: blue
 }
 
