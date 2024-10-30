@@ -209,7 +209,7 @@ addEventListener("load", (event) => {
     .add(namesScroll(), 0)
     .add(fadeInHeroContent(), ">-=2.85")
     .add(rotateSmileyFace(), ">-=.5")
-    .add(repeatChatText, 0)
+    // .add(repeatChatText, 0)
 
     elements = [...$(".projects")[0].children, $(".blog .inner-project-wrap")[0], $(".footer-content-wrap")[0]]
     for (element of elements){
