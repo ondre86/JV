@@ -189,16 +189,16 @@ function ctaIconZoom(){
             scale: 1
         })
     })
-    $(".cta-holster")[1].addEventListener("mouseenter", ()=>{
-        gsap.to(".cta-holster:nth-of-type(2n) .cta-svg svg", {
-            scale: 1.15
-        })
-    })
-    $(".cta-holster")[1].addEventListener("mouseleave", ()=>{
-        gsap.to(".cta-holster:nth-of-type(2n) .cta-svg svg", {
-            scale: 1
-        })
-    })
+    // $(".cta-holster")[1].addEventListener("mouseenter", ()=>{
+    //     gsap.to(".cta-holster:nth-of-type(2n) .cta-svg svg", {
+    //         scale: 1.15
+    //     })
+    // })
+    // $(".cta-holster")[1].addEventListener("mouseleave", ()=>{
+    //     gsap.to(".cta-holster:nth-of-type(2n) .cta-svg svg", {
+    //         scale: 1
+    //     })
+    // })
 }
 
 addEventListener("load", (event) => {

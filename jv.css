@@ -590,7 +590,7 @@ dialog:modal{
 }
 .cta-wrap{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     align-self: center;
     column-gap: 100px;
     padding: 0 0 75px;
